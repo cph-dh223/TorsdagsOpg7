@@ -2,6 +2,7 @@ package tests.Part2;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -16,5 +17,7 @@ public class CirkelTests {
         double expected = Math.pow(2, 2) * Math.PI;
 
         assertEquals(expected, c.area());
+
+        assertThrows(IllegalArgumentException.class , ()->{c.setRadius(-1);});
     }
 }

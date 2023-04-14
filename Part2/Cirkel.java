@@ -4,7 +4,7 @@ public class Cirkel {
     
     private int r;
 
-    public void setRadius(int newRadius){
+    public void setRadius(int newRadius) throws IllegalArgumentException{
         if(newRadius < 0){
             throw new IllegalArgumentException("Radius can not be negative");
         }
